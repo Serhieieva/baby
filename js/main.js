@@ -10,30 +10,11 @@ function setDetails (event_name, host_name, event_date, event_time, event_venue,
 }
 
 $(window).on('load resize', function () {
-
-    //Global Variable
     var winHeight = $(window).height();
     var winWidth = $(window).width();
+    var widthToHeightRatio = 1.338;
+    var wrapDiv = $('.wrapDiv');
 
-    function ScreenHeight () {
-        if (winWidth < 550 && winHeight < 736) {
-            $('.wrapDiv').css({'margin': '15px', 'padding': '15px', 'height': winHeight - 60});
-            $('.container').css({'height': winHeight - 90, 'padding': '15px'});
-        } else if (winWidth > 550 && winHeight < 736) {
-            $('.wrapDiv').css({'margin': '15px auto', 'padding': '15px 0', 'height': winHeight - 60});
-            $('.container').css({'height': winHeight - 90, 'padding': '15px 0'});
-        } else if (winWidth > 559 && winHeight < 736) {
-            $('.wrapDiv').css({'margin': '15px auto', 'padding': '15px 0', 'height': winHeight - 60});
-            $('.container').css({'height': winHeight - 90, 'padding': '15px 0'});
-        }
-    }
-
-    //when Document Height < Window Height Then this fun will call
-    if ($('.wrapDiv').innerHeight() < winHeight) {
-        ScreenHeight();
-    }
-
-    //set daynamic height as per ration
-    var bannerWidth = $('.bannerImag').innerWidth();
-    $('.bannerImag').css({'height': bannerWidth});
+    wrapDiv.css({'height': wrapDiv.width() * widthToHeightRatio});
+    $('.container').css({'font-size': wrapDiv.width() / 23 + 'px'});
 });
