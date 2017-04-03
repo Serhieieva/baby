@@ -1,229 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title> Our Baby Turned ONE! </title>
-        <!--Favicon Icon--> 
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
-        <link id="style-css" rel="stylesheet" href="css/style.css" type="text/css" />
-        <link id="style-css-popup" rel="stylesheet" href="css/jquery.remodal.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-    </head>
-    <body class="webView">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title> Our Baby Turned ONE! </title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link id="style-css-popup" rel="stylesheet" href="css/jquery.remodal.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+</head>
+<body class="webView">
 
-        <header>
-            <div class="header">
-                <img src="images/logo.png">
-            </div>
-            <div class="attend-div">
-                <div class="clearfix">
-                    <a class="open-modal" href="#modal">Will you attend?</a>
-                    <p class="guest_status">You have <strong class="attending">NOT REPLIED</strong></p>
-                </div>
-            </div>
-        </header>
-
-        <!--Header end-->
-
-        <div class="wrapDiv">
-            <div class="container">
-                <div class="bannerImag">
-                    <img id="image1_url" src="images/csb116160.jpg" />
-                </div>
-                <div class="contentWrap">
-                    <div id="event_name" class="event-name">
-                        Its a Baby SHower
-                    </div>
-                    <div id="event_desc" class="event-desc">  Please join us for a Baby Shower honoring Priyanka. Let's get 
-                    together & celebrate. </div>
-                    <!--<div id="event_desc" class="event-desc">  Please join us as we celebrate Sia�s 1st birthday </div>-->
-                    <div id="event_date" class="date-event"> Firday, Jan 20, 2016 </div>
-                    <div id="event_time" class="event-time"> At 6 PM</div>
-                    <div id="event_venue" class="event-location"> 465 Adam St.<br/>  San Francisco, CA 94104 </div>
-                    <div class="event-hosted">Hosted by <span id="host_name">[You Name]</span> </div>              
-                </div>
-            </div>
+<header>
+    <div class="header">
+        <img src="images/logo.png">
+    </div>
+    <div class="attend-div">
+        <div class="clearfix">
+            <a class="open-modal" href="#modal">Will you attend?</a>
+            <p class="guest_status">You have <strong class="attending">NOT REPLIED</strong></p>
         </div>
-        <!--Content End-->
+    </div>
+</header>
 
-        <!--POPUP-->
-        <div class="remodal" data-remodal-id="modal">
-            <div class="submit-form">
-                <form name="rsvpForm" method="post" id="rsvpForm">
-                    <ul class="text-center">
+<div class="wrapDiv">
+    <div class="container">
+        <div class="bannerImag">
+            <img id="image1_url" src="images/csb116160.jpg"/>
+        </div>
+        <div class="contentWrap">
+            <div id="event_name" class="event-name">
+                Its a Baby SHower
+            </div>
+            <div id="event_desc" class="event-desc"> Please join us for a Baby Shower honoring Priyanka. Let's get
+                together & celebrate.
+            </div>
+            <!--<div id="event_desc" class="event-desc">  Please join us as we celebrate Sia�s 1st birthday </div>-->
+            <div id="event_date" class="date-event"> Firday, Jan 20, 2016</div>
+            <div id="event_time" class="event-time"> At 6 PM</div>
+            <div id="event_venue" class="event-location"> 465 Adam St.<br/> San Francisco, CA 94104</div>
+            <div class="event-hosted">Hosted by <span id="host_name">[You Name]</span></div>
+        </div>
+    </div>
+</div>
+
+<!--POPUP-->
+<div class="remodal" data-remodal-id="modal">
+    <div class="submit-form">
+        <form name="rsvpForm" method="post" id="rsvpForm">
+            <ul class="text-center">
+                <li>
+                    <h3>Will you attend?</h3>
+                    <ul class="pos-buttons">
                         <li>
-                            <h3>Will you attend?</h3>
-                            <ul class="pos-buttons">
-                                <li>
-                                    <input type="radio" name="rsvp" id="radio1" class="css-checkbox" value="1" checked="checked"/>
-                                    <label for="radio1" class="css-label radGroup1">Yes</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="rsvp" id="radio3" class="css-checkbox" value="3" />
-                                    <label for="radio3" class="css-label radGroup1">Maybe</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="rsvp" id="radio2" class="css-checkbox" value="2" />
-                                    <label for="radio2" class="css-label radGroup1">No</label>
-                                </li>
-
-                            </ul>
-
-                        </li>
-                        <li class="clearfix">
-                            <div class="hr-line"></div>
-                            <p class="guest-count">How many guest you are bringing ?</p>
-                            <div class="guest-list">
-                                <div class="guest-input">
-                                    <input type="text" class="small-input" placeholder="00" required id="number_of_adults" onkeydown="return isNumber(event);">
-                                    <p>Adults<br><span>( including you )</span></p>
-                                </div>
-                                <div class="guest-input">
-
-                                    <input type="text" class="small-input" placeholder="00" required id="number_of_kids" onkeydown="return isNumber(event);">
-                                    <p>Children</p>
-                                </div>
-                            </div>
-
+                            <input type="radio" name="rsvp" id="radio1" class="css-checkbox" value="1"
+                                   checked="checked"/>
+                            <label for="radio1" class="css-label radGroup1">Yes</label>
                         </li>
                         <li>
-                            <button type="submit">Send Reply</button>
-                            <p class="guest-count wid250">To get all the action, download Phildora app for free!</p>
+                            <input type="radio" name="rsvp" id="radio3" class="css-checkbox" value="3"/>
+                            <label for="radio3" class="css-label radGroup1">Maybe</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="rsvp" id="radio2" class="css-checkbox" value="2"/>
+                            <label for="radio2" class="css-label radGroup1">No</label>
                         </li>
 
                     </ul>
-                </form>
 
-            </div>
-        </div>
-        <!--End POPUP--> 
+                </li>
+                <li class="clearfix">
+                    <div class="hr-line"></div>
+                    <p class="guest-count">How many guest you are bringing ?</p>
+                    <div class="guest-list">
+                        <div class="guest-input">
+                            <input type="text" class="small-input" placeholder="00" required id="number_of_adults"
+                                   onkeydown="return isNumber(event);">
+                            <p>Adults<br><span>( including you )</span></p>
+                        </div>
+                        <div class="guest-input">
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-        <script id="popup-js" src="js/jquery.remodal.js"></script>
-        <script>
-                                        function setDetails(event_name, host_name, event_date, event_time, event_venue, event_desc, image1_url, image2_url)
-                                        {
-                                            $("#event_name").html(event_name);
-                                            $("#host_name").html(host_name);
-                                            $("#event_date").html(event_date);
-                                            $("#event_time").html(event_time);
-                                            $("#event_venue").html(event_venue);
-                                            $("#event_desc").html(event_desc);
-                                            $("#image1_url").attr('src', image1_url);
-                                            $("#image2_url").attr('src', image2_url);
-                                        }
-                                        function isNumber(event) {
-                                            if (event) {
-                                                var charCode = (event.which) ? event.which : event.keyCode;
-                                                if (charCode != 190 && charCode > 31 &&
-                                                        (charCode < 48 || charCode > 57) &&
-                                                        (charCode < 96 || charCode > 105) &&
-                                                        (charCode < 37 || charCode > 40) &&
-                                                        charCode != 110 && charCode != 8 && charCode != 46)
-                                                    return false;
-                                            }
-                                            return true;
-                                        }
-                                        $(window).load(function () {
+                            <input type="text" class="small-input" placeholder="00" required id="number_of_kids"
+                                   onkeydown="return isNumber(event);">
+                            <p>Children</p>
+                        </div>
+                    </div>
 
-                                            //Global Variable
-                                            var winHeight = $(window).height();
-                                            var winWidth = $(window).width();
-                                            function ScreenHeight() {
-                                                if (winWidth < 550 && winHeight < 737) {
-                                                    $('.wrapDiv').css({'margin': '0 10px 10px 10px', 'padding': '15px'});
-                                                    $('.wrapDiv').css({'height': winHeight - (40 + $('header').height())});
-                                                    $('.container').css({'height': winHeight - (70 + $('header').height()), 'padding': '15px'});
-                                                } else if (winWidth > 550 && winHeight < 737) {
-                                                    $('.wrapDiv').css({'margin': '0 auto 10px', 'padding': '15px 0'});
-                                                    $('.wrapDiv').css({'height': winHeight - (40 + $('header').height())});
-                                                    $('.container').css({'height': winHeight - (70 + $('header').height()), 'padding': '15px 0'});
-                                                } else if (winWidth > 559 && winHeight < 960) {
-                                                    $('.wrapDiv').css({'margin': '0 auto 15px', 'padding': '15px 0'});
-                                                    $('.wrapDiv').css({'height': winHeight - (45 + $('header').height())});
-                                                    $('.container').css({'height': winHeight - (75 + $('header').height()), 'padding': '15px 0'});
-                                                }
+                </li>
+                <li>
+                    <button type="submit">Send Reply</button>
+                    <p class="guest-count wid250">To get all the action, download Phildora app for free!</p>
+                </li>
 
-                                                //This js for Modal popup margin top 
-                                                $('.remodal-overlay').css({'margin-top': $('.header').height() + 15});
-                                            }
+            </ul>
+        </form>
 
-                                            //set daynamic height as per ration
-                                            var bannerWidth = $('.bannerImag').innerWidth();
-                                            $('.bannerImag').css({'height': bannerWidth});
+    </div>
+</div>
+<!--End POPUP-->
 
-                                            //when Document Height < Window Height Then this fun will call
-                                            var DocHeoght = $('.wrapDiv').innerHeight() + $('header').innerHeight();
-                                            if (DocHeoght < winHeight) {
-                                                ScreenHeight();
-                                            }
-
-                                            $("#number_of_adults").val(1);
-                                            $("#number_of_kids").val(0);
-                                            $("input[name=rsvp]").change(function () {
-                                                if ($("input[name=rsvp]:checked").val() == 1)
-                                                {
-                                                    if ($("#number_of_adults").val() < 1)
-                                                    {
-                                                        $("#number_of_adults").val(1);
-                                                        $("#number_of_adults").removeAttr("readonly");
-                                                        $("#number_of_kids").removeAttr("readonly");
-                                                    }
-                                                } else
-                                                {
-                                                    $("#number_of_adults").val(0);
-                                                    $("#number_of_kids").val(0);
-                                                    $("#number_of_adults").attr("readonly", "readonly");
-                                                    $("#number_of_kids").attr("readonly", "readonly");
-                                                }
-                                            });
-
-                                            $("#rsvpForm").submit(function (e) {
-                                                e.preventDefault();
-                                                var domainUrl = document.domain;
-                                                $.urlParam = function (name) {
-                                                    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-                                                    if (results == null) {
-                                                        return null;
-                                                    } else {
-                                                        return results[1] || 0;
-                                                    }
-                                                };
-                                                var em_id = $.urlParam('em_id');
-                                                var number = $.urlParam('number');
-                                                var email = $.urlParam('email');
-                                                var rsvp = $("input[name=rsvp]:checked").val();
-                                                var no_of_adults = $("#number_of_adults").val();
-                                                var no_of_kids = $("#number_of_kids").val();
-
-
-                                                $.ajax({
-                                                    url: "http://" + domainUrl + "/phildora/index.php/webservice/sendRsvp",
-                                                    type: "post",
-                                                    data: {'em_id': em_id, 'number': number, 'email': email, 'rsvp': rsvp, 'no_of_adults': no_of_adults, 'no_of_kids': no_of_kids},
-                                                    success: function (response) {
-                                                        if (response == "true")
-                                                        {
-                                                            $(".submit-form").html("<center><h5>Your RSVP response successfully sent!</h5></center>");
-                                                            $(".submit-form").css({"padding-top": "0"});
-                                                        } else if (response == "false")
-                                                        {
-                                                            alert("Please enter the correct number or email on which you have got the invitation!");
-                                                        } else
-                                                        {
-                                                            alert("Error!" + response);
-                                                        }
-                                                    },
-                                                    error: function (xhr, ajaxOptions, thrownError) {
-                                                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                                                    }
-                                                });
-                                            });
-
-                                        });
-
-        </script>
-
-    </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script id="popup-js" src="js/jquery.remodal.js"></script>
+<script src="js/mainWebview.js"></script>
+</body>
 </html>
 
