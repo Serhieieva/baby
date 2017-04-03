@@ -1,0 +1,600 @@
+/* font-family: 'Open Sans Condensed', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Quicksand:400,700&subset=latin-ext');
+@font-face {
+    font-family:'DINCond-Bold';
+    src: url('../fonts/DINCond-Bold.eot');
+    src: url('../fonts/DINCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINCond-Bold.woff2') format('woff2'),
+        url('../fonts/DINCond-Bold.woff') format('woff'),
+        url('../fonts/DINCond-Bold.svg#DINCond-Bold') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Lucida Grande';
+    src: url('../fonts/Lucida Grande.eot');
+    src: url('../fonts/Lucida Grande.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lucida Grande.woff2') format('woff2'),
+        url('../fonts/Lucida Grande.woff') format('woff'),
+        url('../fonts/Lucida Grande.svg#Lucida Grande') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue-Light';
+    src: url('../fonts/HelveticaNeue-Light.woff') format('woff'),
+        url('../fonts/HelveticaNeue-Light.ttf') format('truetype'),
+        url('../fonts/HelveticaNeue-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* { margin: 0; padding: 0; }
+body {background:#fff; font-weight: 400; color: #7F7F7F; padding: 0 0; text-rendering: optimizeLegibility; font-size: 16px;overflow: auto !important; }
+ol, ul { list-style: none; margin: 0; }
+textarea, input { outline: none; }
+p { font-size: 14px; font-weight: 300; line-height: 1.5em; }
+
+h1, h2, h3, h4, 
+h5 { line-height: 1.5em; font-weight: 500; }
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 38px; }
+h4 { font-size: 24px; }
+h5 { font-size: 22px; }
+h6 { font-size: 14px; }
+a { color: #25adb5; -webkit-transition: 0.25s; -moz-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s; }
+
+input[type="date"], input[type="time"] { height:20px;}
+
+a:hover, a:focus { text-decoration: none!important; }
+
+/* Internet Explorer 10+ */
+p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, li::selection, a::selection { background: #25adb5; text-shadow: none; }
+p::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::selection, li::selection, a::-moz-selection {
+    background: #25adb5; text-shadow: none;}
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+div.frameT  {  display: table; height: 100%; left: 0;  margin: 0;  padding: 0;  position: absolute; top: 0;  width: 100%;}
+
+.header{
+    background: rgba(218, 218, 218, 0.3);
+    text-align: center;
+    padding: 7px 0;
+}
+.header img{
+    max-width: 226px;
+    margin: 0 auto;
+    display: block;
+}
+.attend-div{
+    width: 550px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    font-family:'Helvetica';
+}
+.attend-div .open-modal{
+    font-family: 'HelveticaNeue-Light';
+    background: #d0b2eb;
+    border: 1px solid #d0b2eb;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    text-align: center;
+    border-radius: 21px;
+    color: #fff;
+    float: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 2px 20px;
+    display: inline-block;
+}
+.attend-div .open-modal:hover{
+    background: #cc9ef6;
+}
+.attend-div > div{
+    padding: 0 10px;
+    text-align: center;
+}
+.attend-div p{
+    font-family: 'HelveticaNeue-Light';
+    float: none;
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    display: block;
+    line-height: normal;
+    margin-top: 5px;
+}
+.attend-div p strong{
+    font-family:'Helvetica';
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.container{ 
+    max-width:550px;
+    margin: 0 auto;
+    position:relative; 
+    background:#e35561 url(../images/bg.png) top center;   
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+}
+.content-div{
+    padding: 40px 49px;
+    font-family: 'Lobster', cursive;
+}
+#decription{
+    padding:57px 51px;
+    text-align:center;
+    min-height:250px; 
+    word-wrap: break-word;
+    background:rgba(10, 10, 10, 0.35); 
+    border-radius: 50px;
+}
+#decription h2 { 
+    background:url(../images/title-bg.png) no-repeat;
+    margin: 0 auto;
+    width: 374px;
+}
+#topImage { 
+    text-align:center; 
+    padding:50px 0; 
+}
+
+/* common css */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+/* Template 2 */
+img { display: block; }
+.wrapDiv { max-width: 550px; margin: 15px auto; padding: 15px; background: url(../images/background.png) no-repeat; background-size: 100% 100%; }
+.webView .wrapDiv { margin-top: 0; }
+.container {
+    margin: 0 auto;
+    border-radius: 7px;
+    background: url(../images/content-background.png) no-repeat;
+    color: #000000;
+    text-align: center;
+    padding: 15px 0;
+    background-size: 100% 100%;
+}
+
+.bannerImag { 
+    border: 8px solid #ffffff;
+    margin: 0 auto;
+    max-width: 382px;
+    display: block; 
+    text-align: center;
+    height: 200px;
+}
+
+.bannerImag img { max-width: 100%; max-height: 100%; display: block; margin:0 auto; }
+
+.event-desc, .date-event, .event-time, .event-location, .event-hosted  {
+    font-family: 'Quicksand', sans-serif;;
+    font-size: 22px; letter-spacing: 0.7px; text-align: center; color: #000000; line-height: normal; 
+}
+.event-name { font-size: 32px; letter-spacing: 0.6px; line-height: normal; font-family:'Dancing Script', cursive; font-weight: bold;}
+.event-desc { margin-top: 35px; margin-bottom: 35px;   }
+.event-location { margin-bottom: 35px; margin-top: 12px; }
+
+.event-desc, .event-hosted{
+    font-weight: 400;
+}
+
+.date-event, .event-time, .event-location { 
+    font-weight: 700;
+}
+.contentWrap {padding: 25px 33px 45px 33px; }
+
+/*---------- Popup ----------*/
+.text-center li{
+    text-align: center;
+}
+.remodal{
+    font-family: 'HelveticaNeue-Light';
+}
+.remodal h3{
+    font-size: 60px;
+    font-family: 'HelveticaNeue-Light';
+}
+.hr-line{
+    height: 2px;
+    width: 90%;
+    background: #797979;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+p.guest-count{
+    font-size: 30px !important;
+}
+.guest-count.wid250{
+    width: 80%;
+    margin: 0 auto;
+    line-height: 35px;
+    margin-top: 20px;
+    text-decoration: underline;
+    font-style: italic;
+}
+.pos-buttons{
+    list-style-type:none;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.pos-buttons li {
+    display: inline-block;
+    margin:0px;
+    width:160px;
+    position:relative;
+    height: 60px;
+    padding-bottom: 0px !important;
+}
+.pos-buttons li:nth-child(2){
+    width: 140px;
+}
+.pos-buttons li:nth-child(2), .pos-buttons li:nth-child(3){
+    margin-left: -5px;
+}
+
+.pos-buttons label, .pos-buttons input {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.pos-buttons input[type="radio"] {
+    opacity:0.011;
+    z-index:100;
+}
+
+.pos-buttons input[type="radio"]:checked + label {
+    background:#d0b1eb;
+}
+
+.pos-buttons label {
+    padding:5px !important;
+    border:1px solid #797979; 
+    cursor:pointer;
+    z-index:90;
+    margin-right: 0px;
+    text-transform: uppercase;
+}
+.pos-buttons li:nth-child(1) label{
+    border-radius: 5px 0px 0px 5px;
+    border-right: none;
+}
+.pos-buttons li:nth-child(2) label{
+    border-left: none;
+    border-right: none;
+}
+.pos-buttons li:nth-child(3) label{
+    border-radius: 0px 5px 5px 0px;
+    border-left: none;
+}
+.remodal-overlay { margin-top:70px; }
+#decription { display: table; width: 100%; }
+.transp-data { display: table-cell; vertical-align: middle; }
+
+.event-hosted {
+    margin-bottom: 20px;
+}
+/* Responsive Css */
+
+@media only screen and (min-width:600px) and (max-height: 960px) {
+    .webView .wrapDiv { max-width: 450px; }
+    .webView .bannerImag{  max-width: 81%; }
+}
+
+@media only screen and (min-width:600px) and (max-height: 900px) {
+    .header img { max-width: 200px; }
+    .webView .wrapDiv { max-width: 450px; }
+    .event-name { font-size: 30px; }
+    .event-desc { margin: 30px 0; }    
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted { font-size: 20px; }
+
+    .webView .event-name { font-size: 24px; }    
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
+        font-size: 15px;
+    }
+    .webView .event-location { margin-bottom: 25px; }
+    .webView .event-desc {
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-height: 884px) {
+    .webView .bannerImag { max-width: 81%; }
+    .webView .event-name { font-size: 26px; }    
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-height: 828px) {
+    .webView .event-name { font-size: 25px; }    
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-height: 800px) {
+    .webView .wrapDiv { max-width: 450px; }
+    .webView .event-name { font-size: 22px; }    
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
+        font-size: 13px;
+    }
+    .webView .event-desc {
+        margin: 15px 0;
+    }
+    .webView .event-location {
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-height: 770px) {
+    .webView .wrapDiv { max-width: 450px; }
+    .webView .bannerImag { width: 81%; }
+    .webView .event-name { font-size: 20px; }    
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
+        font-size: 12px;
+    }
+    .webView .event-location {  margin-bottom: 15px; }
+    .webView .event-desc {
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-height: 736px) {
+    .bannerImag { max-width: 300px; }
+    .event-name {
+        font-size: 28px;
+    }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted { font-size: 21px; }
+    .webView .event-name { font-size: 22px; }
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {font-size: 16px; }
+}
+
+@media only screen and (max-height: 756px) {
+    .event-name { font-size: 26px; }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted { font-size: 20px; }
+    .event-desc { margin: 25px 0; }
+    .event-location { margin-bottom: 25px; }
+
+    /* header text */
+    .header img { max-width: 160px; }
+    /*.webView .bannerImag { max-width: 160px; }*/
+
+    /* Web views */
+    .webView .event-name { font-size: 20px;}
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted { font-size: 13px; }
+    .webView .event-desc { margin: 15px 0 }
+}
+
+@media only screen and (min-width:550px) and (max-height: 700px) {
+    .webView .event-name { 
+        font-size: 20px;
+    }
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted { 
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+@media only screen and (min-width:550px) and (max-height: 680px) {
+    .webView .event-name { 
+        font-size: 18px;
+    }
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted { 
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+@media only screen and (max-width:565px) {
+    body { overflow: hidden; }
+    .attend-div { width: auto; text-align: center; }
+    .attend-div .open-modal { width: auto; padding: 2px 30px; float: none; display: inline-block; }
+    .attend-div p { float: none; margin-top: 4px; height: 20px; font-size: 16px; }
+}
+@media only screen and (min-width:550px) and (max-height: 755px) {
+    .bannerImag { max-width: 81%; }
+    .event-name { font-size: 20px; }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted { font-size: 14px; }
+    .event-desc , .event-location { margin-bottom: 15px; }
+    .event-desc { margin-top: 15px; }
+    .contentWrap { padding: 15px 33px }
+    .wrapDiv { width: 400px; }
+    .container { margin: 0 41px; } 
+}
+
+/* Nexus 6, iphone 6 plus */
+@media only screen and (max-width:414px) and (max-height: 737px) {
+    .container, .bannerImag { width: 81%; }
+    .wrapDiv { margin: 15px; }
+    .event-name {
+        font-size: 22px;
+    }
+    .event-desc {
+        margin: 20px 0;
+    }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
+        font-size: 14px;
+    }     
+    .event-location { margin-bottom: 20px; }
+    .contentWrap {
+        padding: 20px;
+    }
+
+    /* web view */
+    .webView .event-name {
+        font-size: 18px;
+    }
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted { font-size: 13px }
+    .webView .event-desc {
+        margin: 15px 0;
+    }
+}
+
+/* Galaxy Note 3 , Galaxy S 3, LG Optimus L70  */
+@media only screen and (max-width:384px) and (max-height: 640px) {
+    .event-name { font-size: 20px; }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted { font-size: 14px; }
+    .event-desc { margin: 20px 0; }
+    .contentWrap {
+        padding: 15px;
+    }
+    .event-location { margin-bottom: 20px; }
+
+    /*web view*/
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted { 
+        font-size: 12px;
+    }
+    .webView .event-name {
+        font-size: 18px;
+    }
+    .webView .event-desc { margin: 15px 0; }
+}
+
+
+
+/*  Nokia N9 */
+@media only screen and (max-width:375px) and (max-height: 667px) {
+    .event-name {
+        font-size: 20px;
+    }
+    .event-desc {
+        margin: 20px 0;
+    }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
+        font-size: 14px;
+    }     
+    .event-location { margin-bottom: 20px; }
+
+    /* web view */
+    .webView .event-name {
+        font-size: 18px;
+    }
+    .webView .event-desc { margin: 10px 0; }
+
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted { font-size: 13px; line-height: 16px; }
+}
+
+/* Nexus 5 */
+@media only screen and (max-width:360px) and (max-height: 640px) {
+    .container { width: 81%; }
+    .event-name {
+        font-size: 18px;
+    }
+    .event-desc {
+        margin: 15px 0;
+    }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
+        font-size: 12px;
+    }     
+    .event-location { margin-bottom: 10px; }
+
+    /* web view */
+    .webView .event-name {
+        font-size: 15px;
+    }
+    .webView .event-desc {
+        margin: 10px 0;
+    }
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {  font-size: 10px; }
+}
+
+/* Nokia lumia 520, iphone 5*/
+@media only screen and (max-width:320px) and (max-height: 568px) {
+    .event-name {
+        font-size: 16px;
+    }
+    .event-desc {
+        margin: 15px 0;
+    }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
+        font-size: 11px;
+    }     
+    .event-location { margin-bottom: 10px; }
+
+    /* header content */
+    .attend-div .open-modal, .attend-div p { font-size: 16px; }
+
+    /* web View */
+    .webView .event-name {
+        font-size: 14px;
+    }
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted { font-size: 9px; line-height: 13px; }
+    .webView .event-desc { margin: 7px 0; } 
+}
+
+/* Nokia lumia 520*/
+@media only screen and (max-width:320px) and (max-height: 480px) {
+    .bannerImag { border: 4px solid #ffffff; }
+    .event-name {
+        font-size: 14px;
+    }
+    .event-desc {
+        margin: 10px 0;
+    }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
+        font-size: 10px;
+    }     
+    .event-location { margin-bottom: 10px; }
+
+    /* header */
+    .attend-div p { height: 14px; }
+    /* web view*/
+    .webView .bannerImag {
+        width: 65%;
+    }
+    .webView .event-name {
+        font-size: 11px;
+    }
+    .webView .contentWrap {
+        padding: 8px;
+    }
+    .attend-div .open-modal, .attend-div p { font-size: 14px; }
+}
+
+@media only screen and (min-width:550px) and (min-height: 970px) {
+    .webView .event-name {
+        font-size: 30px;
+    }
+    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width:550px) and (min-height: 735px) {
+    .container {
+        margin: 0 41px;
+    }
+    .event-name {
+        font-size: 28px;
+    }
+    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
+        font-size: 16px;
+    }
+    .webView .event-desc { 
+        margin: 25px 0;
+    }
+}
