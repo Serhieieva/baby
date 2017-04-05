@@ -40,21 +40,29 @@
 }
 
 body {
-    background: #fff;
-    font-weight: 400;
-    color: #7F7F7F;
-    padding: 0 0;
-    text-rendering: optimizeLegibility;
     font-size: 16px;
+    font-weight: 400;
+
     overflow: auto !important;
+
+    padding: 0 0;
+    min-width: 300px;
+
+    color: #7f7f7f;
+    background: #fff;
+
+    text-rendering: optimizeLegibility;
 }
 
-ol, ul {
-    list-style: none;
+ol,
+ul {
     margin: 0;
+
+    list-style: none;
 }
 
-textarea, input {
+textarea,
+input {
     outline: none;
 }
 
@@ -64,10 +72,13 @@ p {
     line-height: 1.5em;
 }
 
-h1, h2, h3, h4,
+h1,
+h2,
+h3,
+h4,
 h5 {
-    line-height: 1.5em;
     font-weight: 500;
+    line-height: 1.5em;
 }
 
 h1 {
@@ -95,39 +106,84 @@ h6 {
 }
 
 a {
+    -webkit-transition: .25s;
+    transition: .25s;
+
     color: #25adb5;
-    -webkit-transition: 0.25s;
-    -moz-transition: 0.25s;
-    -o-transition: 0.25s;
-    transition: 0.25s;
 }
 
-input[type="date"], input[type="time"] {
+input[type='date'],
+input[type='time'] {
     height: 20px;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: none !important;
 }
 
 /* Internet Explorer 10+ */
-p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, li::selection, a::selection {
+p::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::-moz-selection,
+li::-moz-selection,
+a::-moz-selection {
+    background: #25adb5;
+    text-shadow: none;
+}
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+li::selection,
+a::selection {
     background: #25adb5;
     text-shadow: none;
 }
 
-p::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::selection, li::selection, a::-moz-selection {
+p::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::-moz-selection,
+li::-moz-selection,
+a::-moz-selection {
+    background: #25adb5;
+    text-shadow: none;
+}
+
+p::-moz-selection,
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::selection,
+li::selection,
+a::-moz-selection {
     background: #25adb5;
     text-shadow: none;
 }
 
 .clearfix:after {
-    visibility: hidden;
-    display: block;
     font-size: 0;
-    content: " ";
+
+    display: block;
+    visibility: hidden;
     clear: both;
+
     height: 0;
+
+    content: ' ';
 }
 
 * html .clearfix {
@@ -142,49 +198,57 @@ p::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h
 /* IE7 */
 
 div.frameT {
-    display: table;
-    height: 100%;
-    left: 0;
-    margin: 0;
-    padding: 0;
     position: absolute;
     top: 0;
+    left: 0;
+
+    display: table;
+
     width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
-    background: rgba(218, 218, 218, 0.3);
-    text-align: center;
     padding: 7px 0;
+
+    text-align: center;
+
+    background: rgba(218, 218, 218, .3);
 }
 
 .header img {
     max-width: 226px;
     margin: 0 auto;
-    display: block;
 }
 
 .attend-div {
-    width: 550px;
+    font-family: 'Helvetica', sans-serif;
+
     margin: 0 auto;
     padding: 10px 15px;
-    font-family: 'Helvetica';
 }
 
 .attend-div .open-modal {
-    font-family: 'HelveticaNeue-Light';
-    background: #d0b2eb;
-    border: 1px solid #d0b2eb;
+    font-family: 'HelveticaNeue-Light', sans-serif;
     font-size: 20px;
-    letter-spacing: 0.7px;
-    text-align: center;
-    border-radius: 21px;
-    color: #fff;
-    float: none;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 2px 20px;
+
     display: inline-block;
+    float: none;
+
+    padding: 2px 20px;
+
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .5px;
+
+    color: #fff;
+    border: 1px solid #d0b2eb;
+    -webkit-border-radius: 21px;
+    border-radius: 21px;
+    background: #d0b2eb;
 }
 
 .attend-div .open-modal:hover {
@@ -193,59 +257,75 @@ div.frameT {
 
 .attend-div > div {
     padding: 0 10px;
+
     text-align: center;
 }
 
 .attend-div p {
-    font-family: 'HelveticaNeue-Light';
-    float: none;
-    color: #000;
+    font-family: 'HelveticaNeue-Light', sans-serif;
     font-size: 16px;
-    letter-spacing: 0.7px;
-    display: block;
     line-height: normal;
+
+    display: block;
+    float: none;
+
     margin-top: 5px;
+
+    letter-spacing: .7px;
+
+    color: #000;
 }
 
 .attend-div p strong {
-    font-family: 'Helvetica';
-    text-transform: uppercase;
+    font-family: 'Helvetica', sans-serif;
     font-weight: bold;
+
+    text-transform: uppercase;
 }
 
 .content-div {
-    padding: 40px 49px;
     font-family: 'Lobster', cursive;
+
+    padding: 40px 49px;
 }
 
 #decription {
-    padding: 57px 51px;
-    text-align: center;
     min-height: 250px;
+    padding: 57px 51px;
+
+    text-align: center;
     word-wrap: break-word;
-    background: rgba(10, 10, 10, 0.35);
+
+    -webkit-border-radius: 50px;
+
     border-radius: 50px;
+    background: rgba(10, 10, 10, .35);
 }
 
 #decription h2 {
-    background: url(../images/title-bg.png) no-repeat;
-    margin: 0 auto;
     width: 374px;
+    margin: 0 auto;
+
+    background: url(../images/title-bg.png) no-repeat;
 }
 
 #topImage {
-    text-align: center;
     padding: 50px 0;
+
+    text-align: center;
 }
 
 /* common css */
 .clearfix:after {
-    visibility: hidden;
-    display: block;
     font-size: 0;
-    content: " ";
+
+    display: block;
+    visibility: hidden;
     clear: both;
+
     height: 0;
+
+    content: ' ';
 }
 
 .clearfix {
@@ -269,14 +349,18 @@ img {
 }
 
 .wrapDiv {
+    font-size: 24px;
+
+    -webkit-box-sizing: border-box;
+
     box-sizing: border-box;
+    min-width: 260px;
     max-width: 550px;
-    min-width: 320px;
-    margin: 0 auto 15px;
+    margin: 0 auto;
     padding: 0;
+
     background: url(../images/background.png) no-repeat;
     background-size: 100% 100%;
-    font-size: 24px;
 }
 
 .webView .wrapDiv {
@@ -284,53 +368,65 @@ img {
 }
 
 .container {
-    height: 30em;
-    max-width: 550px;
     position: relative;
-    margin: 0 32px;
-    background: url(../images/content-background.png) #fff no-repeat;
-    color: #000000;
-    text-align: center;
-    padding: 0;
-    background-size: 100% 100%;
 
+    max-width: 550px;
+    height: 30em;
+    margin: 0 32px;
+    padding: 0;
+
+    text-align: center;
+
+    color: #000;
+    background: url(../images/content-background.png) no-repeat;
+    background-size: 100% 100%;
 }
 
 .bannerImag {
-    overflow: hidden;
-    margin: 0 -32px;
     display: block;
+    overflow: hidden;
+
+    max-height: 11.8em;
+    margin: 0 -32px;
+
     text-align: center;
-    max-height: 280px;
 }
 
 .bannerImag img {
-    object-fit: cover;
     max-width: 100%;
     height: auto;
-    display: block;
     margin: 0 auto;
+
+    object-fit: cover;
 }
 
-.event-desc, .date-event, .event-time, .event-location, .event-hosted {
+.event-desc,
+.date-event,
+.event-time,
+.event-location,
+.event-hosted {
     font-family: 'Quicksand', sans-serif;
     font-size: .9em;
-    letter-spacing: 0.7px;
     line-height: 1.2;
+
     text-align: center;
-    color: #000000;
+    letter-spacing: .7px;
+
+    color: #000;
 }
 
 .event-name {
-    font-size: 1.9em;
-    letter-spacing: 0.6px;
-    line-height: normal;
     font-family: 'Amatic SC', cursive;
+    font-size: 1.9em;
     font-weight: bold;
+    line-height: normal;
+
+    letter-spacing: .6px;
 }
 
 .event-desc {
     font-size: .85em;
+
     margin-top: 1.4em;
     margin-bottom: 1.5em;
     padding-right: .4em;
@@ -338,20 +434,24 @@ img {
 }
 
 .event-location {
-    margin-bottom: 1.4em;
     margin-top: 1.3em;
+    margin-bottom: 1.4em;
 }
 
-.event-desc, .event-hosted {
+.event-desc,
+.event-hosted {
     font-weight: 400;
 }
 
-.date-event, .event-time, .event-location {
+.date-event,
+.event-time,
+.event-location {
     font-weight: 700;
 }
 
 .contentWrap {
     padding: 1em 1em 0;
+
     word-wrap: break-word;
 }
 
@@ -361,20 +461,21 @@ img {
 }
 
 .remodal {
-    font-family: 'HelveticaNeue-Light';
+    font-family: 'HelveticaNeue-Light', sans-serif;
 }
 
 .remodal h3 {
+    font-family: 'HelveticaNeue-Light', sans-serif;
     font-size: 60px;
-    font-family: 'HelveticaNeue-Light';
 }
 
 .hr-line {
-    height: 2px;
     width: 90%;
-    background: #797979;
+    height: 2px;
     margin: 0 auto;
     margin-bottom: 15px;
+
+    background: #797979;
 }
 
 p.guest-count {
@@ -382,77 +483,91 @@ p.guest-count {
 }
 
 .guest-count.wid250 {
+    font-style: italic;
+    line-height: 35px;
+
     width: 80%;
     margin: 0 auto;
-    line-height: 35px;
     margin-top: 20px;
+
     text-decoration: underline;
-    font-style: italic;
 }
 
 .pos-buttons {
-    list-style-type: none;
     padding-top: 30px;
     padding-bottom: 10px;
+
+    list-style-type: none;
 }
 
 .pos-buttons li {
-    display: inline-block;
-    margin: 0px;
-    width: 160px;
     position: relative;
+
+    display: inline-block;
+
+    width: 160px;
     height: 60px;
-    padding-bottom: 0px !important;
+    margin: 0;
+    padding-bottom: 0 !important;
 }
 
 .pos-buttons li:nth-child(2) {
     width: 140px;
 }
 
-.pos-buttons li:nth-child(2), .pos-buttons li:nth-child(3) {
+.pos-buttons li:nth-child(2),
+.pos-buttons li:nth-child(3) {
     margin-left: -5px;
 }
 
-.pos-buttons label, .pos-buttons input {
-    display: block;
+.pos-buttons label,
+.pos-buttons input {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+
+    display: block;
 }
 
-.pos-buttons input[type="radio"] {
-    opacity: 0.011;
+.pos-buttons input[type='radio'] {
     z-index: 100;
+
+    opacity: .011;
 }
 
-.pos-buttons input[type="radio"]:checked + label {
+.pos-buttons input[type='radio']:checked + label {
     background: #d0b1eb;
 }
 
 .pos-buttons label {
-    padding: 5px !important;
-    border: 1px solid #797979;
-    cursor: pointer;
     z-index: 90;
-    margin-right: 0px;
+
+    margin-right: 0;
+    padding: 5px !important;
+
+    cursor: pointer;
     text-transform: uppercase;
+
+    border: 1px solid #797979;
 }
 
 .pos-buttons li:nth-child(1) label {
-    border-radius: 5px 0px 0px 5px;
     border-right: none;
+    -webkit-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
 }
 
 .pos-buttons li:nth-child(2) label {
-    border-left: none;
     border-right: none;
+    border-left: none;
 }
 
 .pos-buttons li:nth-child(3) label {
-    border-radius: 0px 5px 5px 0px;
     border-left: none;
+    -webkit-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
 }
 
 .remodal-overlay {
@@ -461,11 +576,13 @@ p.guest-count {
 
 #decription {
     display: table;
+
     width: 100%;
 }
 
 .transp-data {
     display: table-cell;
+
     vertical-align: middle;
 }
 
@@ -473,526 +590,9 @@ p.guest-count {
     margin-bottom: .9em;
 }
 
-/*
-
-!* Responsive Css *!
-
-@media only screen and (min-width: 600px) and (max-height: 960px) {
-    .webView .wrapDiv {
-        max-width: 450px;
-    }
-
-    .webView .bannerImag {
-        max-width: 81%;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-height: 900px) {
-    .header img {
-        max-width: 200px;
-    }
-
-    .webView .wrapDiv {
-        max-width: 450px;
-    }
-
-    .event-name {
-        font-size: 30px;
-    }
-
-    .event-desc {
-        margin: 30px 0;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 20px;
-    }
-
-    .webView .event-name {
-        font-size: 24px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 15px;
-    }
-
-    .webView .event-location {
-        margin-bottom: 25px;
-    }
-
-    .webView .event-desc {
-        margin: 20px 0;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-height: 884px) {
-    .webView .bannerImag {
-        max-width: 81%;
-    }
-
-    .webView .event-name {
-        font-size: 26px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 15px;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-height: 828px) {
-    .webView .event-name {
-        font-size: 25px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 14px;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-height: 800px) {
-    .webView .wrapDiv {
-        max-width: 450px;
-    }
-
-    .webView .event-name {
-        font-size: 22px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 13px;
-    }
-
-    .webView .event-desc {
-        margin: 15px 0;
-    }
-
-    .webView .event-location {
-        margin-bottom: 15px;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-height: 770px) {
-    .webView .wrapDiv {
-        max-width: 450px;
-    }
-
-    .webView .bannerImag {
-        width: 81%;
-    }
-
-    .webView .event-name {
-        font-size: 20px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 12px;
-    }
-
-    .webView .event-location {
-        margin-bottom: 15px;
-    }
-
-    .webView .event-desc {
-        margin: 15px 0;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-height: 736px) {
-    .bannerImag {
-        max-width: 300px;
-    }
-
-    .event-name {
-        font-size: 28px;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 21px;
-    }
-
-    .webView .event-name {
-        font-size: 22px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 16px;
-    }
-}
-
-@media only screen and (max-height: 756px) {
-    .event-name {
-        font-size: 26px;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 20px;
-    }
-
-    .event-desc {
-        margin: 25px 0;
-    }
-
-    .event-location {
-        margin-bottom: 25px;
-    }
-
-    !* header text *!
-    .header img {
-        max-width: 160px;
-    }
-
-    !*.webView .bannerImag { max-width: 160px; }*!
-    !* Web views *!
-    .webView .event-name {
-        font-size: 20px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 13px;
-    }
-
-    .webView .event-desc {
-        margin: 15px 0
-    }
-}
-
-@media only screen and (min-width: 550px) and (max-height: 700px) {
-    .webView .event-name {
-        font-size: 20px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 13px;
-        line-height: 18px;
-    }
-}
-
-@media only screen and (min-width: 550px) and (max-height: 680px) {
-    .webView .event-name {
-        font-size: 18px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 12px;
-        line-height: 14px;
-    }
-}
-
-@media only screen and (max-width: 565px) {
-    body {
-        overflow: hidden;
-    }
-
-    .attend-div {
-        width: auto;
-        text-align: center;
-    }
-
-    .attend-div .open-modal {
-        width: auto;
-        padding: 2px 30px;
-        float: none;
-        display: inline-block;
-    }
-
-    .attend-div p {
-        float: none;
-        margin-top: 4px;
-        height: 20px;
-        font-size: 16px;
-    }
-}
-
-@media only screen and (min-width: 550px) and (max-height: 755px) {
-    .bannerImag {
-        max-width: 81%;
-    }
-
-    .event-name {
-        font-size: 20px;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 14px;
-    }
-
-    .event-desc, .event-location {
-        margin-bottom: 15px;
-    }
-
-    .event-desc {
-        margin-top: 15px;
-    }
-
-    .contentWrap {
-        padding: 15px 33px
-    }
-
+@media only screen and (max-width: 579px) {
     .wrapDiv {
-        width: 400px;
-    }
-
-    .container {
-        margin: 0 41px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 }
-
-!* Nexus 6, iphone 6 plus *!
-@media only screen and (max-width: 414px) and (max-height: 737px) {
-    .container, .bannerImag {
-        width: 81%;
-    }
-
-    .wrapDiv {
-        margin: 15px;
-    }
-
-    .event-name {
-        font-size: 22px;
-    }
-
-    .event-desc {
-        margin: 20px 0;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 14px;
-    }
-
-    .event-location {
-        margin-bottom: 20px;
-    }
-
-    .contentWrap {
-        padding: 20px;
-    }
-
-    !* web view *!
-    .webView .event-name {
-        font-size: 18px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 13px
-    }
-
-    .webView .event-desc {
-        margin: 15px 0;
-    }
-}
-
-!* Galaxy Note 3 , Galaxy S 3, LG Optimus L70  *!
-@media only screen and (max-width: 384px) and (max-height: 640px) {
-    .event-name {
-        font-size: 20px;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 14px;
-    }
-
-    .event-desc {
-        margin: 20px 0;
-    }
-
-    .contentWrap {
-        padding: 15px;
-    }
-
-    .event-location {
-        margin-bottom: 20px;
-    }
-
-    !*web view*!
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 12px;
-    }
-
-    .webView .event-name {
-        font-size: 18px;
-    }
-
-    .webView .event-desc {
-        margin: 15px 0;
-    }
-}
-
-!*  Nokia N9 *!
-@media only screen and (max-width: 375px) and (max-height: 667px) {
-    .event-name {
-        font-size: 20px;
-    }
-
-    .event-desc {
-        margin: 20px 0;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 14px;
-    }
-
-    .event-location {
-        margin-bottom: 20px;
-    }
-
-    !* web view *!
-    .webView .event-name {
-        font-size: 18px;
-    }
-
-    .webView .event-desc {
-        margin: 10px 0;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 13px;
-        line-height: 16px;
-    }
-}
-
-!* Nexus 5 *!
-@media only screen and (max-width: 360px) and (max-height: 640px) {
-    .container {
-        width: 81%;
-    }
-
-    .event-name {
-        font-size: 18px;
-    }
-
-    .event-desc {
-        margin: 15px 0;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 12px;
-    }
-
-    .event-location {
-        margin-bottom: 10px;
-    }
-
-    !* web view *!
-    .webView .event-name {
-        font-size: 15px;
-    }
-
-    .webView .event-desc {
-        margin: 10px 0;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 10px;
-    }
-}
-
-!* Nokia lumia 520, iphone 5*!
-@media only screen and (max-width: 320px) and (max-height: 568px) {
-    .event-name {
-        font-size: 16px;
-    }
-
-    .event-desc {
-        margin: 15px 0;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 11px;
-    }
-
-    .event-location {
-        margin-bottom: 10px;
-    }
-
-    !* header content *!
-    .attend-div .open-modal, .attend-div p {
-        font-size: 16px;
-    }
-
-    !* web View *!
-    .webView .event-name {
-        font-size: 14px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 9px;
-        line-height: 13px;
-    }
-
-    .webView .event-desc {
-        margin: 7px 0;
-    }
-}
-
-!* Nokia lumia 520*!
-@media only screen and (max-width: 320px) and (max-height: 480px) {
-    .bannerImag {
-        border: 4px solid #ffffff;
-    }
-
-    .event-name {
-        font-size: 14px;
-    }
-
-    .event-desc {
-        margin: 10px 0;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 10px;
-    }
-
-    .event-location {
-        margin-bottom: 10px;
-    }
-
-    !* header *!
-    .attend-div p {
-        height: 14px;
-    }
-
-    !* web view*!
-    .webView .bannerImag {
-        width: 65%;
-    }
-
-    .webView .event-name {
-        font-size: 11px;
-    }
-
-    .webView .contentWrap {
-        padding: 8px;
-    }
-
-    .attend-div .open-modal, .attend-div p {
-        font-size: 14px;
-    }
-}
-
-@media only screen and (min-width: 550px) and (min-height: 970px) {
-    .webView .event-name {
-        font-size: 30px;
-    }
-
-    .webView .event-desc, .webView .date-event, .webView .event-time, .webView .event-location, .webView .event-hosted {
-        font-size: 18px;
-    }
-}
-
-@media only screen and (min-width: 550px) and (min-height: 735px) {
-    .container {
-        margin: 0 41px;
-    }
-
-    .event-name {
-        font-size: 28px;
-    }
-
-    .event-desc, .date-event, .event-time, .event-location, .event-hosted {
-        font-size: 16px;
-    }
-
-    .webView .event-desc {
-        margin: 25px 0;
-    }
-}*/

@@ -22,40 +22,42 @@ function isNumber (event) {
     return true;
 }
 
-$(window).on('load resize',function () {
+function tryBackgroundImages (name, destination) {
+    var img = new Image();
 
-    //Global Variable
+    img.src = 'images/' + name + '.jpg';
+    img.onerror = function () {
+        img.src = 'images/' + name + '.png';
+        img.onerror = function () {
+            img.src = 'images/' + name + '.gif';
+        };
+    };
+
+    img.onload = function () {
+        destination.css('background-image', 'url(' + this.src + ')');
+    };
+}
+
+function removeUSFromAddress (address) {
+    var regexp = /,*\s*usa|,*\s*US|,*\s*united states( of america)?/i;
+    return address.replace(regexp,' ');
+}
+
+tryBackgroundImages('background', $('.wrapDiv'));
+tryBackgroundImages('content-background', $('.container'));
+
+$(window).on('load resize', function () {
     var winHeight = $(window).height();
     var winWidth = $(window).width();
+    var widthToHeightRatio = 1.338;
+    var wrapDiv = $('.wrapDiv');
 
-    function ScreenHeight () {
-        if (winWidth < 550 && winHeight < 737) {
-            $('.wrapDiv').css({'margin': '0 10px 10px 10px', 'padding': '15px'});
-            $('.wrapDiv').css({'height': winHeight - (40 + $('header').height())});
-            $('.container').css({'height': winHeight - (70 + $('header').height()), 'padding': '15px'});
-        } else if (winWidth > 550 && winHeight < 737) {
-            $('.wrapDiv').css({'margin': '0 auto 10px', 'padding': '15px 0'});
-            $('.wrapDiv').css({'height': winHeight - (40 + $('header').height())});
-            $('.container').css({'height': winHeight - (70 + $('header').height()), 'padding': '15px 0'});
-        } else if (winWidth > 559 && winHeight < 960) {
-            $('.wrapDiv').css({'margin': '0 auto 15px', 'padding': '15px 0'});
-            $('.wrapDiv').css({'height': winHeight - (45 + $('header').height())});
-            $('.container').css({'height': winHeight - (75 + $('header').height()), 'padding': '15px 0'});
-        }
+    wrapDiv.css({'height': wrapDiv.width() * widthToHeightRatio});
+    $('.container').css({'font-size': wrapDiv.width() / 23 + 'px'});
 
-        //This js for Modal popup margin top
-        $('.remodal-overlay').css({'margin-top': $('.header').height() + 15});
-    }
+    eventPlace.innerHTML = removeUSFromAddress(eventPlace.innerHTML);
 
-    //set daynamic height as per ration
-    var bannerWidth = $('.bannerImag').innerWidth();
-    $('.bannerImag').css({'height': bannerWidth});
-
-    //when Document Height < Window Height Then this fun will call
-    var DocHeoght = $('.wrapDiv').innerHeight() + $('header').innerHeight();
-    if (DocHeoght < winHeight) {
-        ScreenHeight();
-    }
+    $('.remodal-overlay').css({'margin-top': $('.header').height() + 15});
 
     $("#number_of_adults").val(1);
     $("#number_of_kids").val(0);
@@ -119,5 +121,4 @@ $(window).on('load resize',function () {
             }
         });
     });
-
 });
