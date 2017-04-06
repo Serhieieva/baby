@@ -40,7 +40,7 @@ function resizeWrapper (wrapDiv) {
         wpapperWidth = wpapperHeight * heightToWidthRatio;
     } else if (winHeight > 736) {
         wpapperWidth = $(window).width();
-        wpapperHeight = wpapperHeight * widthToHeightRatio;
+        wpapperHeight = wpapperWidth * widthToHeightRatio;
     } else {
         if ($(window).width() / winHeight < 1.338) {
             wpapperHeight = ($(window).width() - 30) * widthToHeightRatio;
