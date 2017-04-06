@@ -428,7 +428,7 @@ img {
     font-family: 'Amatic SC', cursive;
     font-size: 1.9em;
     font-weight: bold;
-    line-height: normal;
+    line-height: 1em;
 
     letter-spacing: .6px;
 }
@@ -459,7 +459,7 @@ img {
 }
 
 .contentWrap {
-    padding: 1em 1em 0;
+    padding: 1em 0;
 
     word-wrap: break-word;
 }
@@ -600,7 +600,7 @@ p.guest-count {
 }
 
 @media only screen and (max-width: 579px) {
-    .wrapDiv {
+    .wrapDiv, .wrapDiv.vertical-centered {
         margin-left: 15px;
         margin-right: 15px;
     }
