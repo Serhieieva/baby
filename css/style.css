@@ -290,26 +290,6 @@ div.frameT {
     padding: 40px 49px;
 }
 
-#decription {
-    min-height: 250px;
-    padding: 57px 51px;
-
-    text-align: center;
-    word-wrap: break-word;
-
-    -webkit-border-radius: 50px;
-
-    border-radius: 50px;
-    background: rgba(10, 10, 10, .35);
-}
-
-#decription h2 {
-    width: 374px;
-    margin: 0 auto;
-
-    background: url(../images/title-bg.png) no-repeat;
-}
-
 #topImage {
     padding: 50px 0;
 
@@ -621,12 +601,6 @@ p.guest-count {
 
 .remodal-overlay {
     margin-top: 70px;
-}
-
-#decription {
-    display: table;
-
-    width: 100%;
 }
 
 .transp-data {
