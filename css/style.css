@@ -135,6 +135,7 @@ a::-moz-selection {
     background: #25adb5;
     text-shadow: none;
 }
+
 p::selection,
 h1::selection,
 h2::selection,
@@ -381,7 +382,7 @@ img {
 
     max-width: 550px;
     height: 30em;
-    margin: 0 32px;
+    margin: 1.25em 1.333em 0;
     padding: 0;
 
     text-align: center;
@@ -396,7 +397,7 @@ img {
     overflow: hidden;
 
     max-height: 11.8em;
-    margin: 0 -32px;
+    margin: -1.25em -1.333em 0;
 
     text-align: center;
 }
@@ -407,6 +408,25 @@ img {
     margin: 0 auto;
 
     object-fit: cover;
+}
+
+.contentWrap {
+    width: 100%;
+    height: 18.5em;
+    overflow-y: auto;
+
+    word-wrap: break-word;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
 }
 
 .event-desc,
@@ -433,18 +453,44 @@ img {
     letter-spacing: .6px;
 }
 
+.event-name .cell {
+    height: 2.3em;
+}
+
 .event-desc {
     font-size: .85em;
 
-    margin-top: 1.4em;
-    margin-bottom: 1.5em;
     padding-right: .4em;
     padding-left: .4em;
 }
 
-.event-location {
-    margin-top: 1.3em;
-    margin-bottom: 1.4em;
+.event-desc .cell {
+    height: 5.8em;
+}
+
+.date-event .cell,
+.event-time .cell {
+    height: 1.4em;
+}
+
+.date-event .cell {
+    padding-top: .5em;
+}
+
+.event-time .cell {
+    padding-bottom: .5em;
+}
+
+.event-location .cell {
+    height: 3.6em;
+}
+
+.event-location .cell {
+    height: 3.6em;
+}
+
+.event-hosted .cell {
+    height: 2.6em;
 }
 
 .event-desc,
@@ -456,12 +502,6 @@ img {
 .event-time,
 .event-location {
     font-weight: 700;
-}
-
-.contentWrap {
-    padding: 1em 0;
-
-    word-wrap: break-word;
 }
 
 /*---------- Popup ----------*/
@@ -593,10 +633,6 @@ p.guest-count {
     display: table-cell;
 
     vertical-align: middle;
-}
-
-.event-hosted {
-    margin-bottom: .9em;
 }
 
 @media only screen and (max-width: 579px) {
