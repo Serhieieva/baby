@@ -55,8 +55,6 @@ $(window).on('load resize', function () {
     wrapDiv.css({'height': wrapDiv.width() * widthToHeightRatio});
     $('.container').css({'font-size': wrapDiv.width() / 23 + 'px'});
 
-    eventPlace.innerHTML = removeUSFromAddress(eventPlace.innerHTML);
-
     $('.remodal-overlay').css({'margin-top': $('.header').height() + 15});
 
     $("#number_of_adults").val(1);

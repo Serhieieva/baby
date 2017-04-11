@@ -16,8 +16,6 @@ $(window).on('load resize', function () {
     var eventPlace = document.getElementById('event_venue');
 
     resizeWrapper();
-
-    eventPlace.innerHTML = removeUSFromAddress(eventPlace.innerHTML);
 });
 
 function resizeWrapper (wrapDiv) {
@@ -58,11 +56,6 @@ function resizeWrapper (wrapDiv) {
     });
 
     $('.container').css({'font-size': wpapperWidth / 23 + 'px'});
-}
-
-function removeUSFromAddress (address) {
-    var regexp = /,*\s*usa|,*\s*US|,*\s*united states( of america)?/i;
-    return address.replace(regexp, ' ');
 }
 
 function tryBackgroundImages (name, destination) {
