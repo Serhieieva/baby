@@ -17,10 +17,6 @@ $(window).on('load resize', function () {
 
     resizeWrapper();
 
-    // wrapDiv.css({'height': wrapDiv.width() * widthToHeightRatio});
-    //
-    // $('.container').css({'font-size': wrapDiv.width() / 23 + 'px'});
-
     eventPlace.innerHTML = removeUSFromAddress(eventPlace.innerHTML);
 });
 
